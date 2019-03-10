@@ -1,0 +1,32 @@
+swagger: "2.0"
+info:
+  title: "ChickenGuard"
+  description: ""
+  version: "1.0.0"
+tags:
+- name: "Climate"
+  description: "Information about climate"
+produces:
+- "application/json"
+paths:
+  /api/climate-info/current:
+    get:
+      tags:
+      - "Climate"
+      description: "Get current climate"
+      operationId: "getCurrentClimate"
+      responses:
+        200:
+          description: "Current climate"
+          schema:
+            type: "object"
+            $ref: "#/definitions/ClimateInfo"
+
+definitions:
+  ClimateInfo:
+    type: "object"
+    properties:
+      temperature:
+        type: "number"
+      humidity:
+        type: "number"

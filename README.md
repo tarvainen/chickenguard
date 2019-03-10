@@ -2,6 +2,16 @@
 
 App to help us guard our chickens
 
+## Installation
+
+```
+# on rpi
+npm install
+
+# on non-rpi
+npm install --no-optional
+```
+
 ## Configuration
 
 ### DHT22

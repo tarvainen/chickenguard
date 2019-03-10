@@ -10,7 +10,11 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.4",
-    "node-dht-sensor": "0.0.34",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "swagger-ui-express": "^4.0.2",
+    "yamljs": "^0.3.0"
+  },
+  "optionalDependencies": {
+    "node-dht-sensor": "0.0.34"
   }
 }
