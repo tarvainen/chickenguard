@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const sensor = require('node-dht-sensor')
+const sensor = require('../util/dht')
 
 router.get('/current', async (req, res) => {
   sensor.read(22, 4, (err, t, h) => {
@@ -7,7 +7,7 @@ router.get('/current', async (req, res) => {
       return res.status(500).json({ err: err.toString() })
     }
 
-    res.json({ temperature: t.toFixed(2), humidity: h.toFixed(2) })
+    res.json({ temperature: +t.toFixed(2), humidity: +h.toFixed(2) })
   })
 })
 
