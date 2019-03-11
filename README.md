@@ -66,6 +66,10 @@ directory=/app
 command=npm run worker
 ```
 
+## Usage
+
+API documentation is available at http://localhost:3000/api/doc
+
 # License
 
 MIT
