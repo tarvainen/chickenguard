@@ -17,7 +17,7 @@ exports.setup = function(options, seedLink) {
 exports.up = function(db) {
   return db.runSql(
     `
-      create table if not exists climate_records (
+      create table if not exists weather_series (
         id          int           not null primary key auto_increment,
         temperature decimal(4,2)  null default null,
         humidity    decimal(4,2)  null default null,

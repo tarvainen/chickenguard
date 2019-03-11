@@ -4,8 +4,8 @@ info:
   description: ""
   version: "1.0.0"
 tags:
-- name: "Climate"
-  description: "Information about climate"
+- name: "Weather"
+  description: "Information about weather"
 produces:
 - "application/json"
 paths:
@@ -18,21 +18,21 @@ paths:
       responses:
         200:
           description: "Service healthy"
-  /api/climate-info/current:
+  /api/weather/current:
     get:
       tags:
-      - "Climate"
-      description: "Get current climate"
-      operationId: "getCurrentClimate"
+      - "Weather"
+      description: "Get current weather"
+      operationId: "getCurrentWeather"
       responses:
         200:
-          description: "Current climate"
+          description: "Current weather"
           schema:
             type: "object"
-            $ref: "#/definitions/ClimateInfo"
+            $ref: "#/definitions/Weather"
 
 definitions:
-  ClimateInfo:
+  Weather:
     type: "object"
     properties:
       temperature:

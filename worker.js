@@ -5,7 +5,7 @@ const scheduler = require('node-schedule')
 const everyMinute = '* * * * *'
 
 scheduler.scheduleJob(
-  'store-climate-info',
+  'store-weather',
   everyMinute,
-  require('./src/job/store-climate-info')
+  require('./src/job/store-weather')
 )
