@@ -39,6 +39,22 @@ MYSQL_DATABASE=app
 
 Follow https://github.com/momenso/node-dht-sensor#first-example to connect DHT22
 
+### Supervisor
+
+**Note: required to run as root to access GPIO**
+
+```
+[program:app]
+user=root
+directory=/app
+command=npm start
+
+[program:worker]
+user=root
+directory=/app
+command=npm run worker
+```
+
 # License
 
 MIT
