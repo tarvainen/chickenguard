@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "worker": "node worker.js",
-    "db:migrate": "db-migrate up"
+    "db:migrate": "db-migrate up",
+    "lint": "standard"
   },
   "author": "",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "node-dht-sensor": "0.0.34"
   },
   "devDependencies": {
-    "db-migrate": "^0.11.5"
+    "db-migrate": "^0.11.5",
+    "standard": "^12.0.1"
   }
 }
