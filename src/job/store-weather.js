@@ -1,3 +1,5 @@
+'use strict'
+
 const weatherman = require('../service/weatherman')
 
 async function storeWeather () {
