@@ -4,6 +4,14 @@
 
 App to help us guard our chickens
 
+```
++--------------+        +-----------+       +-----------------+
+|              |        |           |       |                 |
+|  NodeJS API  ----------  MariaDB  ---------  NodeJS Worker  |
+|              |        |           |       |                 |
++--------------+        +-----------+       +-----------------+
+```
+
 ## Requirements
 
 * Node
