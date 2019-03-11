@@ -15,11 +15,14 @@ npm install
 
 # on non-rpi
 npm install --no-optional
+
+npm run db:migrate
+npm start
 ```
 
 ## Configuration
 
-## Environments
+### Environments
 
 You can simply use local `.env` file to configure environments (`cp .env.dist .env`)
 
