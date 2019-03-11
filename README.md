@@ -2,6 +2,11 @@
 
 App to help us guard our chickens
 
+## Requirements
+
+* Node
+* MariaDB (or MySQL)
+
 ## Installation
 
 ```
@@ -13,6 +18,19 @@ npm install --no-optional
 ```
 
 ## Configuration
+
+## Environments
+
+You can simply use local `.env` file to configure environments (`cp .env.dist .env`)
+
+Configurable environments are
+
+```
+MYSQL_HOST=localhost
+MYSQL_USERNAME=username
+MYSQL_PASSWORD=password
+MYSQL_DATABASE=app
+```
 
 ### DHT22
 
