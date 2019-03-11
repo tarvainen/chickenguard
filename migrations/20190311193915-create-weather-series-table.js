@@ -14,7 +14,7 @@ exports.up = function (db) {
 }
 
 exports.down = function (db) {
-  return db.runSql('drop table if exists climate_records')
+  return db.runSql('drop table if exists weather_series')
 }
 
 exports._meta = {
