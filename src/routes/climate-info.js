@@ -7,7 +7,10 @@ router.get('/current', async (req, res) => {
       return res.status(500).json({ err: err.toString() })
     }
 
-    res.json({ temperature: +t.toFixed(2), humidity: +h.toFixed(2) })
+    res.json({
+      temperature: +t.toFixed(2),
+      humidity: +h.toFixed(2)
+    })
   })
 })
 
