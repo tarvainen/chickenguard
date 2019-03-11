@@ -9,6 +9,15 @@ tags:
 produces:
 - "application/json"
 paths:
+  /api/healtz:
+    get:
+      tags:
+      - "Health"
+      description: "Get application health status"
+      operationId: "getHealth"
+      responses:
+        200:
+          description: "Service healthy"
   /api/climate-info/current:
     get:
       tags:
