@@ -4,12 +4,13 @@ let Gpio
 
 try {
   Gpio = require('onoff').Gpio
-  new Gpio(0, 'out')
-} catch (e) {
+
+  const pin = new Gpio(0, 'out') // eslint-disable-line
+} catch (e) {
+  console.warn('Mocking GPIO writeSync, using on a non-raspi?')
+
   Gpio = class {
-    writeSync () {
-      console.warn('Mocking GPIO writeSync, using on a non-raspi?')
-    }
+    writeSync () {}
   }
 }
 
