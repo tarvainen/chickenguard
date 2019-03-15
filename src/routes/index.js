@@ -7,6 +7,7 @@ const swaggerDocument = YAML.load('./swagger.yaml')
 
 router.use('/healtz', require('./healtz'))
 router.use('/weather', require('./weather'))
+router.use('/fan', require('./fan'))
 router.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 module.exports = router

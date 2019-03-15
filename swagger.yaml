@@ -6,6 +6,8 @@ info:
 tags:
 - name: "Weather"
   description: "Information about weather"
+- name: "Fan"
+  description: "Control fan"
 produces:
 - "application/json"
 paths:
@@ -30,6 +32,26 @@ paths:
           schema:
             type: "object"
             $ref: "#/definitions/Weather"
+
+  /api/fan/start:
+    post:
+      tags:
+      - "Fan"
+      description: "Start fan"
+      operationId: "startFan"
+      responses:
+        200:
+          description: "Fan started"
+
+  /api/fan/stop:
+    post:
+      tags:
+      - "Fan"
+      description: "Stop fan"
+      operationId: "stopFan"
+      responses:
+        200:
+          description: "Fan stopped"
 
 definitions:
   Weather:
