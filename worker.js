@@ -11,3 +11,9 @@ scheduler.scheduleJob(
   everyMinute,
   require('./src/job/store-weather')
 )
+
+scheduler.scheduleJob(
+  'export-weather',
+  everyMinute,
+  require('./src/job/export-weather')
+)
