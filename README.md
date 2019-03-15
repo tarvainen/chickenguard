@@ -5,11 +5,11 @@
 App to help us guard our chickens
 
 ```
-+--------------+        +-----------+       +-----------------+
-|              |        |           |       |                 |
-|  NodeJS API  ----------  MariaDB  ---------  NodeJS Worker  |
-|              |        |           |       |                 |
-+--------------+        +-----------+       +-----------------+
++--------------+        +-----------+       +-----------------+      +-----------------+
+|              |        |           |       |                 |      |                 |
+|  NodeJS API  ----------  MariaDB  ---------  NodeJS Worker  --------   AWS Lambdas   |
+|              |        |           |       |                 |      |                 |
++--------------+        +-----------+       +-----------------+      +-----------------+
 ```
 
 ## Requirements
@@ -44,6 +44,7 @@ MYSQL_PORT=3306
 MYSQL_USERNAME=username
 MYSQL_PASSWORD=password
 MYSQL_DATABASE=app
+API_HOST=foobar.yourawslambdadomain.com
 ```
 
 ### DHT22
@@ -66,10 +67,18 @@ directory=/app
 command=npm run worker
 ```
 
+#### program:app
+
+Keeps API running in case of failure. Startup on system startup.
+
+#### program:worker
+
+Keeps worker running in case of failure. Startup on system startup.
+
 ## Usage
 
 API documentation is available at http://localhost:3000/api/doc
 
 # License
 
-MIT
+Though you would propably do nothing with this, it's still MIT
