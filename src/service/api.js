@@ -15,7 +15,8 @@ async function createWeatherRecord (record) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Content-Length': data.length
+        'Content-Length': data.length,
+        'x-api-key': process.env.API_KEY
       }
     }
 
